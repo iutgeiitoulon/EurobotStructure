@@ -10,9 +10,18 @@ namespace Positioning2WheelsNS
 {
     public class Positioning2Wheels
     {
+        int robotId;
+        public Positioning2Wheels(int id)
+        {
+            robotId = id;
+        }
+
         public void OnOdometryRobotSpeedReceived(object sender, PolarSpeedArgs e)
         {
+            /// Ajoutez votre code de calcul de la nouvelle position ici
 
+            /// Ajoutez l'appel à l'event de transmission de la position calculée ici
+            
         }
 
         //Output events
