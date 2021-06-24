@@ -191,11 +191,11 @@ namespace Constants
     public enum AsservissementMode
     {
         Off4Wheels = 0,
-        Off2Wheels = 1,
-        Polar4Wheels = 2,
-        Polar2Wheels = 3,
-        Independant4Wheels = 4,
-        Independant2Wheels = 5,
+        Polar4Wheels = 1,
+        Independant4Wheels = 2,
+        Off2Wheels = 10,
+        Polar2Wheels = 11,
+        Independant2Wheels = 12,
     }
     public enum ActiveMode
     {

@@ -79,7 +79,7 @@ namespace RobotEurobot2Roues
             
             trajectoryGenerator.OnSpeedConsigneEvent += robotMsgGenerator.GenerateMessageSetSpeedConsigneToRobot;           //Transmission des commande de vitesse aux moteurs de déplacement
             strategyManager.OnSetSpeedConsigneToMotorEvent += robotMsgGenerator.GenerateMessageSetSpeedConsigneToMotor;     //Transmission des commande de vitesse (aux moteurs annexes)
-            
+
             strategyManager.InitStrategy(); //à faire après avoir abonné les events !
 
             StartRobotInterface();

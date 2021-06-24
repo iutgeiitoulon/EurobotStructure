@@ -34,8 +34,8 @@ namespace StrategyManagerProjetEtudiantNS
         {
             //On initialisae le timer de réglage récurrent 
             //Il permet de modifier facilement les paramètre des asservissement durant l'exécution
-            configTimer = new System.Timers.Timer(1000);
-            configTimer.Elapsed += ConfigTimer_Elapsed; ;
+            configTimer = new Timer(1000);
+            configTimer.Elapsed += ConfigTimer_Elapsed;
             configTimer.Start();
 
             ////Obtenus directement à partir du script Matlab
