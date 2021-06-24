@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{12565644-3BF5-4BCB-84E5-6BDA7D16293C}</ProjectGuid>
+    <ProjectGuid>{2FD3217A-7528-4B55-BE0B-005E6FDD9CA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>USBVendor</RootNamespace>
-    <AssemblyName>USBVendor</AssemblyName>
+    <RootNamespace>USBDriverNS</RootNamespace>
+    <AssemblyName>USBDriver</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,51 +31,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SciChart.Charting, Version=6.3.0.13476, Culture=neutral, PublicKeyToken=b55dd9efe817e823, processorArchitecture=MSIL">
-      <HintPath>..\RobotEurobot2Roues\packages\SciChart.6.3.0.13476\lib\net452\SciChart.Charting.dll</HintPath>
-    </Reference>
-    <Reference Include="SciChart.Core, Version=6.3.0.13476, Culture=neutral, PublicKeyToken=b55dd9efe817e823, processorArchitecture=MSIL">
-      <HintPath>..\RobotEurobot2Roues\packages\SciChart.6.3.0.13476\lib\net452\SciChart.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="SciChart.Data, Version=6.3.0.13476, Culture=neutral, PublicKeyToken=b55dd9efe817e823, processorArchitecture=MSIL">
-      <HintPath>..\RobotEurobot2Roues\packages\SciChart.6.3.0.13476\lib\net452\SciChart.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="SciChart.Drawing, Version=6.3.0.13476, Culture=neutral, PublicKeyToken=b55dd9efe817e823, processorArchitecture=MSIL">
-      <HintPath>..\RobotEurobot2Roues\packages\SciChart.6.3.0.13476\lib\net452\SciChart.Drawing.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinUSBNet, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Robot\packages\WinUSBNet.2.1.0\lib\net45\WinUSBNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeviceManagement.cs" />
-    <Compile Include="DeviceManagementApi.cs" />
-    <Compile Include="FileIOApi.cs" />
-    <Compile Include="NativeMethods.cs" />
-    <Compile Include="USBVendor.cs" />
+    <Compile Include="USBDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WinUsbCommunication.cs" />
-    <Compile Include="WinUsbDevice.cs" />
-    <Compile Include="WinUsbDeviceApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EventArgsLibrary\EventArgsLibrary.csproj">
       <Project>{9C46A7C0-4675-41BE-B282-E6F0825AD73E}</Project>
       <Name>EventArgsLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PerformanceMonitorTools\PerformanceMonitorTools.csproj">
-      <Project>{e43fd01a-2803-412c-8b33-256d3f681029}</Project>
-      <Name>PerformanceMonitorTools</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

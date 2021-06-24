@@ -7,7 +7,6 @@ using RobotInterface;
 using System;
 using System.Runtime.InteropServices;
 using System.Threading;
-using USBVendorNS;
 using XBoxControllerNS;
 using Constants;
 using StrategyManagerProjetEtudiantNS;
@@ -15,12 +14,13 @@ using SciChart.Charting.Visuals;
 using Positioning2WheelsNS;
 using TrajectoryGeneratorNonHolonomeNS;
 using WorldMapManager;
+using USBDriverNS;
 
 namespace RobotEurobot2Roues
 {
     class RobotEurobot2Roues
     {
-        static USBVendor usbDriver;
+        static USBDriver usbDriver;
         static MsgDecoder msgDecoder;
         static MsgEncoder msgEncoder;
         static MsgGenerator robotMsgGenerator;
@@ -48,7 +48,7 @@ namespace RobotEurobot2Roues
             int robotId = 10; /// Ne pas changer cette variable !
             int teamId = 0; /// Ne pas changer cette variable !
 
-            usbDriver = new USBVendor();
+            usbDriver = new USBDriver();
             msgDecoder = new MsgDecoder();
             msgEncoder = new MsgEncoder();
             robotMsgGenerator = new MsgGenerator();
