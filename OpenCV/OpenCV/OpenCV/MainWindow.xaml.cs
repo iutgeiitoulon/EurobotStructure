@@ -24,9 +24,9 @@ namespace OpenCV
 
         public void LoadImage()
         {
-            Mat img = new Mat(200, 400, DepthType.Cv8U, 3);
+            //Mat img = new Mat(200, 400, DepthType.Cv8U, 3);
             //string s = new Uri("../../Resources/logo.png").ToString();
-            //Mat img = new Mat();// "../../Images/RoboCup1.jpg");
+            Mat img = new Mat(@"../../../../../Images/RoboCup1.jpg");
 
             imageCamera1.Source = ImageSourceFromBitmap(img.ToBitmap());
             //Image <Bgr, Byte> myImage = new Image<Bgr, byte>("../../Images/RoboCup1.jpg");
